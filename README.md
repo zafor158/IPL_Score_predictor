@@ -19,3 +19,7 @@ In ipl season 2008 to 2020, all the data are avaiable for prediction in our proj
 # In Our Project,What we actually do?
 ![image](https://github.com/zafor158/IPL_Score_predictor/assets/98481506/b4d4273a-1343-41c2-95ee-7157e1d2024f)
 
+# Our Streamlite App
+![image](https://github.com/zafor158/IPL_Score_predictor/assets/98481506/e34ded99-8093-4a17-949b-6bcb7e502d60)
+
+
