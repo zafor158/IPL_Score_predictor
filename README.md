@@ -4,5 +4,7 @@ This Machine Learning model adapts a Regression Approach to predict the score of
 Algorithmn used:
 
 Decision Tree Regressor
+
 Linear Regression
+
 Random Forest Regression
