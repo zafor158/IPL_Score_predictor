@@ -1,1 +1,2 @@
-# IPL_Score_predictor
+# IPL Score Prediction Using Machine Learning Algorithmns
+![Uploading image.png…]()
