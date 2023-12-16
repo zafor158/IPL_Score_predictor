@@ -9,7 +9,7 @@ import streamlit as st
 st.set_page_config(page_title='IPL_Score_Predictor',layout="centered")
 
 #Get the ML model
-filename ='compressed_model_pkl.gz'
+filename ='IPL_Score_predictor/compressed_model.pkl.gz'
 #model = pickle.load(open(filename,'wb'))
 with gzip.open(filename, 'rb') as f:
     model = pickle.load(f)
