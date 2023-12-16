@@ -11,8 +11,20 @@ st.set_page_config(page_title='IPL_Score_Predictor',layout="centered")
 #Get the ML model
 filename ='IPL_Score_predictor/compressed_model.pkl.gz'
 #model = pickle.load(open(filename,'wb'))
-with gzip.open(filename, 'rb') as f:
+
+if os.path.exists(filename):
+    with gzip.open(filename, 'rb') as f:
     model = pickle.load(f)
+else:
+    st.error(f"Error: File '{filename}' not found.")
+
+try:
+    with gzip.open(filename, 'rb') as f:
+        loaded_model = pickle.load(f)
+except Exception as e:
+    st.error(f"Error loading the model: {e}")
+
+
 
 
 
