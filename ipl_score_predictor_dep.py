@@ -75,8 +75,8 @@ ipl_df.head()
 
 """Plotting a Correlation Matrix of current data"""
 
-from seaborn import heatmap
-heatmap(data=ipl_df.corr(), annot=True)
+#from seaborn import heatmap
+#heatmap(data=ipl_df.corr(), annot=True)
 
 """# Data Preprocessing and Encoding
 
