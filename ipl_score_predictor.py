@@ -9,9 +9,22 @@ import streamlit as st
 st.set_page_config(page_title='IPL_Score_Predictor',layout="centered")
 
 #Get the ML model
+import os
 
-filename='ml_model.pkl'
-model = pickle.load(open(filename,'wb'))
+# Get the directory of the current script
+script_directory = os.path.dirname(os.path.abspath(__"C:\Users\LENEVO\Downloads\ml_model (1)\ml_model (1).pkl"__))
+
+# Construct the absolute path to the model file
+filename = os.path.join(script_directory, 'ml_model.pkl(1)')
+
+# Check if the file exists
+if os.path.exists(filename):
+    model = pickle.load(open(filename, 'rb'))
+else:
+    st.error(f"Error: File '{filename}' not found.")
+
+#filename='ml_model.pkl'
+#model = pickle.load(open(filename,'wb'))
 
 
 
