@@ -1,10 +1,7 @@
-
 # Importing Necessary Libraries
 import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
-
-
 
 #Importing dataset
 ipl_df = pd.read_csv('ipl_data.csv')
