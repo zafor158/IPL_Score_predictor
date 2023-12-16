@@ -3,6 +3,7 @@
 import math
 import numpy as np
 import pickle
+import gzip
 import streamlit as st
 
 #SET PAGE WIDE
