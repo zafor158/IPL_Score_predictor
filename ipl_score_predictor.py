@@ -11,7 +11,7 @@ st.set_page_config(page_title='IPL_Score_Predictor',layout="centered")
 #Get the ML model
 
 filename='ml_model.pkl'
-#model = pickle.load(open(filename,'rb'))
+model = pickle.load(open(filename,'wb'))
 
 
 
@@ -122,7 +122,7 @@ with col4:
 
 prediction_array = prediction_array + [runs, wickets, overs, runs_in_prev_5,wickets_in_prev_5]
 prediction_array = np.array([prediction_array])
-predict = filename.predict(prediction_array)
+predict = model.predict(prediction_array)
 
 
 if st.button('Predict Score'):
