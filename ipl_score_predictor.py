@@ -10,15 +10,9 @@ import streamlit as st
 st.set_page_config(page_title='IPL_Score_Predictor',layout="centered")
 
 filename = 'compressed_model.pkl.gz'
-
 # Load the compressed pickle file
 with gzip.open(filename, 'rb') as f:
     model = pickle.load(f)
-
-
-
-
-
 #Title of the page with CSS
 
 st.markdown("<h1 style='text-align: center; color: white;'> IPL Score Prediction Using Machine Learning </h1>", unsafe_allow_html=True)
@@ -46,8 +40,6 @@ with st.expander("Description"):
  """)
 
 # SELECT THE BATTING TEAM
-
-
 batting_team= st.selectbox('Select the Batting Team ',('Chennai Super Kings', 'Delhi Daredevils', 'Kings XI Punjab','Kolkata Knight Riders','Mumbai Indians','Rajasthan Royals','Royal Challengers Bangalore','Sunrisers Hyderabad'))
 
 prediction_array = []
@@ -68,10 +60,6 @@ elif batting_team == 'Royal Challengers Bangalore':
     prediction_array = prediction_array + [0,0,0,0,0,0,1,0]
 elif batting_team == 'Sunrisers Hyderabad':
     prediction_array = prediction_array + [0,0,0,0,0,0,0,1]
-
-
-
-
 #SELECT BOWLING TEAM
 
 bowling_team = st.selectbox('Select the Bowling Team ',('Chennai Super Kings', 'Delhi Daredevils', 'Kings XI Punjab','Kolkata Knight Riders','Mumbai Indians','Rajasthan Royals','Royal Challengers Bangalore','Sunrisers Hyderabad'))
@@ -106,8 +94,6 @@ with col1:
 with col2:
 #Enter Current Run
     runs = st.number_input('Enter Current runs',min_value=0,max_value=354,step=1,format='%i')
-
-
 #Wickets Taken till now
 wickets =st.slider('Enter Wickets fallen till now',0,9)
 wickets=int(wickets)
@@ -127,8 +113,6 @@ with col4:
 prediction_array = prediction_array + [runs, wickets, overs, runs_in_prev_5,wickets_in_prev_5]
 prediction_array = np.array([prediction_array])
 predict = model.predict(prediction_array)
-
-
 if st.button('Predict Score'):
     #Call the ML Model
     my_prediction = int(round(predict[0]))
