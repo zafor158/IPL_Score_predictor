@@ -102,7 +102,7 @@ with col4:
 #Get all the data for predicting
 prediction_array = prediction_array + [runs, wickets, overs, runs_in_prev_5,wickets_in_prev_5]
 prediction_array = np.array([prediction_array])
-predict = labeled_model.predict(prediction_array)
+#predict = labeled_model.predict(prediction_array)
 if st.button('Predict Score'):
     #Call the ML Model
     my_prediction = int(round(predict[0]))
