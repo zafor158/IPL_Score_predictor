@@ -389,11 +389,7 @@ pickle.dump(forest, open(filename, "wb"))
 
 """##Streamlit app"""
 
-! pip install streamlit -q
 
-!wget -q -O - ipv4.icanhazip.com
-
-! streamlit run ipl_score_predictor.py & npx localtunnel --port 8501
 
 #import the libraries
 
