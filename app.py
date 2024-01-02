@@ -176,7 +176,11 @@ prediction_array = prediction_array + [runs, wickets, overs, runs_in_prev_5,wick
 prediction_array = np.array([prediction_array])
 
 
-submit_button_clicked = st.form_submit_button('Predict Score')
+with st.form(key='prediction_form'):
+    # ... (previous code for input fields)
+
+    # Enter the button click flag
+    submit_button_clicked = st.form_submit_button('Predict Score')
 
 # Check if the button is clicked
 if submit_button_clicked:
