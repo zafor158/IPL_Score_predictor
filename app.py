@@ -176,12 +176,14 @@ prediction_array = prediction_array + [runs, wickets, overs, runs_in_prev_5,wick
 prediction_array = np.array([prediction_array])
 
 
+submit_button_clicked = st.form_submit_button('Predict Score')
 
-if st.button('Predict Score'):
-    #Call the ML Model
+# Check if the button is clicked
+if submit_button_clicked:
+    # Call the ML Model
     predict = forest.predict(prediction_array)
     my_prediction = int(round(predict[0]))
 
-    #Display the predicted Score Range
-    x=f'PREDICTED MATCH SCORE : {my_prediction-5} to {my_prediction+5}'
+    # Display the predicted Score Range
+    x = f'PREDICTED MATCH SCORE : {my_prediction-5} to {my_prediction+5}'
     st.success(x)
