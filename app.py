@@ -218,11 +218,12 @@ with col4:
 
 prediction_array = prediction_array + [runs, wickets, overs, runs_in_prev_5,wickets_in_prev_5]
 prediction_array = np.array([prediction_array])
-predict = forest.predict(prediction_array)
+
 
 
 if st.button('Predict Score'):
     #Call the ML Model
+    predict = forest.predict(prediction_array)
     my_prediction = int(round(predict[0]))
 
     #Display the predicted Score Range
