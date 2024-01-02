@@ -5,7 +5,7 @@ import numpy as np
 import streamlit as st
 
 #Importing dataset
-ipl_df = pd.read_csv('/content/ipl_data.csv');
+ipl_df = pd.read_csv('ipl_data.csv');
 
 #dropping irrelevent data
 irrelevant = ['mid', 'date', 'venue','batsman', 'bowler', 'striker', 'non-striker']
